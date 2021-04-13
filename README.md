@@ -43,6 +43,6 @@
 >> ###### [(Return to top)](https://github.com/EricHoward27/ecommerce-api#ecommerce-api)
 >>
 > ## Entity Relationship Diagram
-> ![ERD](/home/eric/sei/projects/ecommerce-api/docs/image/E Commerce ERD.png)
+> ![ERD]('./docs/image/ecommerceerd.png')
 >> ###### [(Return to top)](https://github.com/EricHoward27/ecommerce-api#ecommerce-api)
 >>
