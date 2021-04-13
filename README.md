@@ -46,3 +46,24 @@
 > ![ERD](./docs/image/ecommerceerd.png)
 >> ###### [(Return to top)](https://github.com/EricHoward27/ecommerce-api#ecommerce-api)
 >>
+> ## Planning
+>> The planning was based on the project requirements and the entirely of this project is plan for future iterations/versions.[Project Requirements Checklist](https://docs.google.com/spreadsheets/d/1plXxLqck-l3Kkk6ihQ5J-0vHIq69jEb04SmZJktsVwo/edit#gid=0).
+>>
+>> ###### [(Return to top)](https://github.com/EricHoward27/ecommerce-api#ecommerce-api)
+>>
+> ## Technologies Employed
+>> | **General Development** | **[Client](https://github.com/EricHoward27/ecommerce-client) Development** | **[API](https://github.com/EricHoward27/ecommerce-api) Development** | **Deployment** |
+>> |---|---|---|---|
+>> | [GitHub](https://github.com/) | [React](https://reactjs.org/) | [Django](https://www.djangoproject.com/) | [GH Pages](https://pages.github.com/) |
+>> | [React-Bootstrap](https://react-bootstrap.github.io/) | [Postman](https://www.postman.com/) | [Heroku](https://www.heroku.com) |
+>> | [VS Code](https://code.visualstudio.com/) | [Semantic UI React](https://react.semantic-ui.com/) | [PostgreSQL](https://www.postgresql.org/) | |
+>> | [GoogleSheets](https://docs.google.com/spreadsheets/d/1plXxLqck-l3Kkk6ihQ5J-0vHIq69jEb04SmZJktsVwo/edit#gid=0) | | | |
+>> | [Google](https://www.google.com/) | | | |
+>> | [MDN Web Docs](https://developer.mozilla.org/en-US/) | | | |
+>> | [JavaScript](https://www.javascript.com/) | | | |
+>> | [React-Stripe](https://stripe.com/docs/stripe-js/react) | | | |
+>
+>> ###### [(Return to top)](https://github.com/EricHoward27/ecommerce-api#ecommerce-api)
+>>
+> ## Future Iterations
+> 
