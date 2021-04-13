@@ -65,5 +65,9 @@
 >
 >> ###### [(Return to top)](https://github.com/EricHoward27/ecommerce-api#ecommerce-api)
 >>
+> ## Wireframe
+> ![Wireframe](./docs/image/ecommercewireframe.png)
+>> ###### [(Return to top)](https://github.com/EricHoward27/ecommerce-api#ecommerce-api)
+>>
 > ## Future Iterations
 > 
