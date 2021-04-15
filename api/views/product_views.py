@@ -6,16 +6,17 @@ from rest_framework import generics, status
 from django.shortcuts import get_object_or_404
 from django.contrib.auth import get_user, authenticate, login, logout
 from django.middleware.csrf import get_token
-from django.contrib.auth.mixin import UserPassesTestMixin
+# from django.contrib.auth.decorators import user_passes_test
+
 
 from ..serializers import ProductSerializer, UserSerializer
 from ..models.product import Product
 
-class SuperUserCheck(UserPassesTestMixin, APIView):
-    def is_superuser(self):
-        return self.request.user.is_superuser
+# class SuperUserCheck(UserPassesTestMixin, APIView):
+#     def is_superuser(self):
+#         return self.request.user.is_superuser
 
-class ProductView(SuperUserCheck, generics.ListCreateAPIView):
+class ProductView(generics.ListCreateAPIView):
     permission_classes=(IsAuthenticated,)
     serializer_class = ProductSerializer
     def get(self, request):
@@ -28,6 +29,8 @@ class ProductView(SuperUserCheck, generics.ListCreateAPIView):
         data = ProductSerializer(products, many=True).data
         return Response({ 'products': data })
     
+    # Check if user passes a superuser before creating a new product
+    # @user_passes_test(lambda u: u.is_superuser)
     def post(self, request):
         """Create Product Request"""
         request.data['product']['owner'] = request.user.id
@@ -36,7 +39,7 @@ class ProductView(SuperUserCheck, generics.ListCreateAPIView):
         if product.is_valid():
             # Save the create product & send a response
             product.save()
-            return Response({ 'products': product.data }, status=status.HTTP_201_CREATED)
+            return Response(product.data, status=status.HTTP_201_CREATED)
          # If the data is not valid, return a response with the errors
         return Response(product.errors, status=status.HTTP_400_BAD_REQUEST)
 
@@ -60,7 +63,7 @@ class ProductDetailView(generics.RetrieveUpdateDestroyAPIView):
         if not request.user.id == product.owner.id:
             raise PermissionDenied('Unauthorized, you do not own this product')
         product.delete()
-        return Response((status=status.HTTP_204_NO_CONTENT))
+        return Response(status=status.HTTP_204_NO_CONTENT)
     
     def partial_update(self, request, pk):
         """Update Product Request"""

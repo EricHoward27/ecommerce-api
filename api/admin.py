@@ -3,7 +3,11 @@ from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 
 from .models.user import User
 from .models.mango import Mango
+from .models.order import Order
+from .models.orderitem import OrderItem
 from .models.product import Product
+from .models.review import Review
+from .models.shippingaddress import ShippingAddress
 
 class UserAdmin(BaseUserAdmin):
     ordering = ['id']
@@ -42,3 +46,7 @@ class UserAdmin(BaseUserAdmin):
 admin.site.register(User, UserAdmin)
 admin.site.register(Mango)
 admin.site.register(Product)
+admin.site.register(Review)
+admin.site.register(Order)
+admin.site.register(OrderItem)
+admin.site.register(ShippingAddress)

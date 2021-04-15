@@ -4,6 +4,10 @@ from rest_framework import serializers
 from .models.mango import Mango
 from .models.product import Product
 from .models.user import User
+from .models.order import Order
+from .models.orderitem import OrderItem
+from .models.review import Review
+from .models.shippingaddress import ShippingAddress
 
 class MangoSerializer(serializers.ModelSerializer):
     class Meta:
@@ -15,7 +19,26 @@ class ProductSerializer(serializers.ModelSerializer):
         model = Product
         fields = '__all__'
 
+class OrderSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Order
+        fields = '__all__'
 
+class OrderItemSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = OrderItem
+        fields = '__all__'
+
+
+class ReviewSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Review
+        fields = '__all__'
+
+class ShippingAddressSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ShippingAddress
+        fields = '__all__'
 class UserSerializer(serializers.ModelSerializer):
     # This model serializer will be used for User creation
     # The login serializer also inherits from this serializer

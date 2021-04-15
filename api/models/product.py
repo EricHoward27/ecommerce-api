@@ -7,7 +7,7 @@ class Product(models.Model):
     owner = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
     # name have max char length set to 100 and set null to true, and blank to true if user keeps empty
     name = models.CharField(max_length=100, null=True, blank=True)
-    # image =
+    image = models.ImageField(null=True, blank=True)
     brand = models.CharField(max_length=100, null=True, blank=True)
     category = models.CharField(max_length=100, null=True, blank=True)
     description = models.TextField(null=True, blank=True)
