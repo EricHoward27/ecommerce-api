@@ -17,8 +17,8 @@ from ..models.product import Product
 #         return self.request.user.is_superuser
 
 class ProductView(generics.ListCreateAPIView):
-    permission_classes=(IsAuthenticated,)
     serializer_class = ProductSerializer
+    permission_classes=(IsAuthenticated,)
     def get(self, request):
         """Index Product Request"""
         # Get all the mangos:
